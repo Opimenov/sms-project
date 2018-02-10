@@ -1,35 +1,39 @@
 import fileinput
+import math
+import pandas as pd
+from pandas import ExcelWriter
 
-def search_and_enter(phonenum, newtext):
-    filename = "text_file.txt"
-    file = open(filename, "r")
-    linefile = open("linefile.txt", "w+")
-    num = 1
-    for num, line in enumerate(file, 1):
-        print(num)
-        #if line == :
-        #    print("after the if")
-        #    open(filename, "a")
-        #    file.write(phonenum)
-        #    file.write(newtext)
-        if phonenum in line:
+def search_and_enter(phonenum, newKey, newValue):
+    x1 = pd.ExcelFile('filename.xlsx')
+    df = x1.parse('Sheet1')
+    i = 0
+    while df["PHONE NUMBER"][i] != phonenum:
+        print(df["PHONE NUMBER"][i])
+        print("i = " + str(i))
+        if math.isnan(float(df["PHONE NUMBER"][i])):
+            print('We got here! i =')
+            print(i)
+            df["PHONE NUMBER"][i] = phonenum
+            print("Phonenum =")
+            print(phonenum)
+            print(df["PHONE NUMBER"][i])
             break
-    file.close()
-    file = open(filename, "r")
-    for x in range (0, num-1):
-        linefile.write(file.readline())
-    newtext = file.readline().rstrip() + ", " + newtext;
-    linefile.write(newtext)
-    for line in file:
-        linefile.write(file.readline())
-    linefile.close()
-    file.close()
+        i = i + 1
+    
+    df[newKey][i] = newValue
+    print(newKey + newValue)
+    print(i)
+    print(df[newKey][i])
+    df.to_csv('filename.csv', sep=',')
+        
+
 
 def main():
-    phonenum = "8675309"
+    phonenum = "86475834"
+    newKey = "MIDDLE NAME"
     newtext = "Jeremy"
     #phonenum, newtext = tuple
-    search_and_enter(phonenum, newtext)
+    search_and_enter(phonenum, newKey, newtext)
 
 if __name__ == "__main__":
     main()
