@@ -1,0 +1,7 @@
+,Club #,FIRST NAME,MIDDLE NAME,LAST NAME,SCHOOL,CLASS,DATE OF BIRTH,Unnamed: 7,RETURNING/NEW,FIRST NAME OF GUARDIAN,MIDDLE NAMEOF GUARDIAN,LAST NAME GUARDIAN,ADDRESS,PHONE NUMBER,OTHER PHONE NUMBER,IMAGE RELEASE
+0,4.0,Gloria,,Ahiadorme,Methodist 2Basic School,JHS 1,2004-07-24 00:00:00,,New,Amos,,,,0242223423,,Yes
+1,4.0,Hannah,,Turkson,Methodist 2Basic School,JHS 2,2003-09-12 00:00:00,,New,,Kow,,White House,0243912123,,Yes
+2,4.0, Sophia,,Tawiah,Methodist 2Basic School,JHS 1,2003-06-13 00:00:00,,New,Eric,,,,9175478416,,Yes
+3,4.0,Grace,,,Methodist 2Basic School,JHS 2,2001-09-25 00:00:00,,New,,,,,,,Yes
+4,,,,,,,,,,,,,,,,
+5,,,,,,"(range P4, P5, P6, JHS 1, JHS2)",They use date/month /year. DB requires m/d/y),,,,,,This is often missing,Starts with zero,,
