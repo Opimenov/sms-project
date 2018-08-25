@@ -81,7 +81,7 @@ try:
     #very bad idea to hardcode password 
     #use this instead getpass.getpass()
     #but it saves time
-    M.login('ghana.sms.project@gmail.com', 'ghanasmsproject') 
+    M.login('email', 'password') 
 
 except imaplib.IMAP4.error:
     print ("LOGIN FAILED!!! ")
